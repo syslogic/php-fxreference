@@ -1,6 +1,6 @@
 <?php
 /**
- * The ECB Foreign Exchange Rates Reference Class for PHP5
+ * 
  * This class obtains the current & historical Foreign Exchange Rates from the ECB Web-Server.
  * The source XML is updated daily around 16:00 CET, Central European Standard Time.
  * I'm a freelance developer and in no way affiliated with the ECB System.
@@ -11,16 +11,16 @@
  * @bitcoin 19uySyXrtqQ71PFZWHb2PxBwtNitg2Dp6b
 **/
 class fxreference {
-	
+
 	/* the base URL */
 	private $baseUrl = "http://www.ecb.europa.eu/";
-	
+
 	/* XML related */
 	private $xmlSourceDaily = "stats/eurofxref/eurofxref-daily.xml";
-	
+
 	/* RSS related */
 	private $rssSource = "rss/fxref-SYMBOL.html";
-        
+
 	/* available symbols */
 	private $symbols = array(
             'usd', 'jpy', 'bgn', 'czk',
@@ -32,28 +32,27 @@ class fxreference {
             'mxn', 'myr', 'nzd', 'php',
             'sgd', 'thb', 'zar'
 	);
-	
-        private $debug = FALSE;
-        private $symbol = null;
+
+	private $debug = FALSE;
+	private $symbol = null;
 	private $data = array();
 	private $xmlFeed = "";
-        
+
 	/**
 	 * PHP5 Constructor
 	**/
 	public function __construct($currency_code = null) {
-            
+
             /* while a currency-code was provided: */
             if(! is_null($currency_code)) {
 
                 /* parse the historical RSS for the symbol: */
                 if(! function_exists('simplexml_load_string')) {
-                    die("fxreference fatal error: PHP is not compiled with simplexml.");
+                    die("fxreference fatal error: PHP simplexml extension is not loaded.");
                 } else {
                     $this->symbol = trim(strtolower($currency_code));
                     $this->parseRss();
                 }
-                
 
             } else {
 
@@ -65,7 +64,7 @@ class fxreference {
                 }
             }
 	}
-	
+
 	/**
 	 * the parsed values are always relative to 1,00 €.
 	 * @return void
@@ -94,12 +93,12 @@ class fxreference {
                 $this->data = json_decode($json, TRUE);
 	    }
 	}
-	
+
 	/** @return the parsed data as a JSON Array. */
 	public function toJson() {
 		return json_encode($this->data);
 	}
-	
+
 	/** @return the parsed data as a PHP Array. */
 	public function toArray() {
 		return $this->data;
