@@ -3,7 +3,7 @@
  * The ECB Foreign Exchange Rates Reference for PHP5.
  * This class obtains the current & historical Foreign Exchange Rates from the ECB.
  * The source XML is updated daily around 16:00 CET, Central European Standard Time.
- * Please consider a donation, while you use this class in your projects.
+ * Please consider a donation, while you use this class in your project.
  * @copyright Copyright 2017 by Martin Zeitler, All rights reserved.
  * @author https://plus.google.com/+MartinZeitler
  * @bitcoin 19uySyXrtqQ71PFZWHb2PxBwtNitg2Dp6b
@@ -30,7 +30,7 @@ class fxreference {
 	 * PHP5 Constructor
 	**/
 	public function __construct() {
-		try{
+		try {
 			if(ini_get('allow_url_fopen')) {
 				$this->parseXml();
 			} else {
@@ -42,12 +42,12 @@ class fxreference {
 	}
 
 	/**
-	 * The returned values are always relative to 1,00 €
+	 * The parsed values are always relative to 1,00 €.
 	 * @return void
 	**/
 	private function parseXml() {
 		$this->xmlContext = file($this->sourceUrl);
-		foreach($this->xmlContext as $line){
+		foreach($this->xmlContext as $line) {
 			if(preg_match("/currency='([[:alpha:]]+)'/",$line,$currencyCode)){
 				if(preg_match("/rate='([[:graph:]]+)'/",$line,$rate)){
 					if($this->debug) {echo "1&euro;=".$rate[1]." ".$currencyCode[1]."<br/>";}
