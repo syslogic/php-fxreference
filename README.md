@@ -1,21 +1,30 @@
 # php-fxreference
-An Foreign Exchange Rate Reference Class for PHP5
+A Foreign Exchange Rate Reference Class for PHP5
 
 ## Abstract
-This class obtains the current & historical Foreign Exchange Rates from the ECB.
+Class `fxreference` retrieves the current & historical Foreign Exchange Rates from the ECB.
 
-The source XML is updated daily around 16:00 CET, Central European Standard Time.
-    
-## Usage: Historical Data (one currency symbol)
+The source XML for the daily fix is updated daily around 16:00 CET, Central European Standard Time.
+
+## Installation
+
+Class `fxreference` can be referenced with `include_once` or `require_once`.
 
     include_once 'fxreference.php';
+
+## Usage: retrieve historical data (one currency symbol only)
+
     $reference = new fxreference('usd');
     
-    $data = $reference->toArray();
-    
-## Usage: Daily Fix (several currency symbols)
+## Usage: retrieve the daily fix (several currency symbols)
 
-    include_once 'fxreference.php';
     $reference = new fxreference();
     
+## Usage: Results to Array
+
     $data = $reference->toArray();
+
+## Usage: Results to JSON
+
+    $data = $reference->toJson();
+    
