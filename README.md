@@ -6,25 +6,25 @@ Class `fxreference` retrieves the current & historical Foreign Exchange Rates fr
 
 The source XML for the daily fix is updated daily around 16:00 CET, Central European Standard Time.
 
-## Installation
+## Usage
 
 Class `fxreference` can be referenced with `include_once` or `require_once`.
 
     include_once 'fxreference.php';
 
-## Usage: retrieve historical data (one currency symbol only)
+## Historical Data (one currency symbol only)
 
     $reference = new fxreference('usd');
     
-## Usage: retrieve the daily fix (several currency symbols)
+## Daily Fix (several currency symbols)
 
     $reference = new fxreference();
     
-## Usage: Results to Array
+## Result to Array
 
     $data = $reference->toArray();
 
-## Usage: Results to JSON
+## Result to JSON
 
     $data = $reference->toJson();
     
