@@ -1,5 +1,5 @@
 # php-fxreference
-A **Foreign Exchange Rate Reference** Class for **PHP5**
+**Foreign Exchange Rates Reference** Wrapper Class for **PHP5**
 
 ## Abstract
 Class `fxreference` retrieves the current & historical Foreign Exchange Rates from the ECB.
