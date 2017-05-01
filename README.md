@@ -8,7 +8,7 @@ The source XML for the daily fix is updated daily around 16:00 CET, Central Euro
 
 ## Usage
 
-Class `fxreference` can be referenced with `include_once` or `require_once`.
+Class `fxreference` can be referenced with `include_once` or `require_once`, for example:
 
     include_once 'fxreference.php';
 
