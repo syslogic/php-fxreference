@@ -60,10 +60,7 @@ class fxreference {
             }
 	}
 
-	/**
-	 * the parsed values are always relative to 1,00 €.
-	 * @return void
-	**/
+	/** the parsed values are always relative to 1,00 €. */
 	private function parseDailyXml() {
             $this->xmlFeed = file($this->baseUrl.$this->xmlSourceDaily);
             foreach($this->xmlFeed as $line) {
