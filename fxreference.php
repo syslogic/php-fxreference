@@ -23,9 +23,9 @@ class fxreference {
 
 	/* available symbols */
 	private $symbols = array(
-            'usd', 'jpy', 'bgn', 'czk', 'dkk', 'eek', 'gbp', 'huf', 'pln', 'ron', 'sek', 'chf',
-            'nok', 'hrk', 'rub', 'try', 'aud', 'brl', 'cad', 'cny', 'hkd', 'idr', 'inr', 'krw',
-            'mxn', 'myr', 'nzd', 'php', 'sgd', 'thb', 'zar'
+            'usd', 'jpy', 'bgn', 'czk', 'dkk', 'eek', 'gbp', 'huf', 'pln', 'ron', 'sek',
+	    'chf', 'nok', 'hrk', 'rub', 'try', 'aud', 'brl', 'cad', 'cny', 'hkd', 'idr',
+	    'inr', 'krw', 'mxn', 'myr', 'nzd', 'php', 'sgd', 'thb', 'zar'
 	);
 
 	private $debug = FALSE;
