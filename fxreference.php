@@ -6,7 +6,7 @@
  * I'm a freelance developer and in no way affiliated with the ECB System.
  * For the copyright of the financial information, which is being provided,
  * @see https://www.ecb.europa.eu/home/disclaimer/html/index.en.html
- * @copyright Copyright 2017 by Martin Zeitler, All rights reserved.
+ * @copyright Copyright 2017 by Martin Zeitler.
  * @author https://plus.google.com/+MartinZeitler
  * @bitcoin 19uySyXrtqQ71PFZWHb2PxBwtNitg2Dp6b
 **/
