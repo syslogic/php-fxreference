@@ -3,9 +3,10 @@
  * 
  * This class obtains the current & historical Foreign Exchange Rates from the ECB Web-Server.
  * The source XML is updated daily around 16:00 CET, Central European Standard Time.
- * I'm a freelance developer and in no way affiliated with the ECB System.
+ * 
  * For the copyright of the financial information, which is being provided,
  * @see https://www.ecb.europa.eu/home/disclaimer/html/index.en.html
+ *
  * @author Martin Zeitler
  * @bitcoin 3Dy3VJ533TKzEMTphUK6SyTpQyBy3BPhYg
 **/
