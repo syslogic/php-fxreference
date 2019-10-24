@@ -1,6 +1,5 @@
 <?php
 /**
- * 
  * This class obtains the current & historical Foreign Exchange Rates from the ECB Web-Server.
  * The source XML is updated daily around 16:00 CET, Central European Standard Time.
  * 
